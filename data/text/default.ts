@@ -21,6 +21,10 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		swap: "[POKEMON] and [TARGET] switched places!",
 		swapCenter: "[POKEMON] moved to the center!",
 
+		// Multi Battles only
+		canDynamax: "  [TRAINER] can dynamax now!",
+		canDynamaxOwn: "  Dynamax Energy gathered around [TRAINER]!",
+
 		zEffect: "  [POKEMON] unleashes its full-force Z-Move!",
 		move: "[POKEMON] used **[MOVE]**!",
 		abilityActivation: "[[POKEMON]'s [ABILITY]]",
@@ -66,7 +70,6 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		activateWeaken: "  The [ITEM] weakened the damage to [POKEMON]!",
 
 		damage: "  ([POKEMON] was hurt!)",
-		damagefromStealthrockfire: "  The magma scorched [POKEMON]!",
 		damagePercentage: "  ([POKEMON] lost [PERCENTAGE] of its health!)",
 		damageFromPokemon: "  [POKEMON] was hurt by [SOURCE]'s [ITEM]!", // Jaboca/Rowap Berry
 		damageFromItem: "  [POKEMON] was hurt by its [ITEM]!", // Sticky Barb
@@ -286,13 +289,6 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		upkeep: "  (The hail is crashing down.)",
 		damage: "  [POKEMON] is buffeted by the hail!",
 	},
-	sleet: {
-		weatherName: "Sleet",
-		start: "  It started to hail!",
-		end: "  The hail stopped.",
-		upkeep: "  (The hail is crashing down.)",
-		damage: "  [POKEMON] is buffeted by the hail!",
-	},
 	desolateland: {
 		weatherName: "Intense Sun",
 		start: "  The sunlight turned extremely harsh!",
@@ -306,12 +302,6 @@ export const DefaultText: {[k: string]: DefaultText} = {
 		end: "  The heavy rain has lifted!",
 		block: "  There is no relief from this heavy rain!",
 		blockMove: "  The Fire-type attack fizzled out in the heavy rain!",
-	},
-	newmoon: {
-		weatherName: "New Moon",
-		start: "  The sky darked!",
-		end: "  The darkness faded.",
-		upkeep: "  (The sky is dark.)",
 	},
 	deltastream: {
 		weatherName: "Strong Winds",

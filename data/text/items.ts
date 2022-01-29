@@ -119,10 +119,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Binding Band",
 		desc: "Holder's partial-trapping moves deal 1/6 max HP per turn instead of 1/8.",
 	},
-	bisharpite: {
-		name: "Bisharpite",
-		desc: "If held by Bisharp, this item allows it to Mega Evolve in battle.",
-	},
 	blackbelt: {
 		name: "Black Belt",
 		desc: "Holder's Fighting-type attacks have 1.2x power.",
@@ -193,10 +189,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Burn Drive",
 		desc: "Holder's Techno Blast is Fire type.",
 	},
-	cacturnite: {
-		name: "Cacturnite",
-		desc: "If held by a Cacturne, this item allows it to Mega Evolve in battle.",
-	},
 	cameruptite: {
 		name: "Cameruptite",
 		desc: "If held by a Camerupt, this item allows it to Mega Evolve in battle.",
@@ -223,10 +215,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	chartiberry: {
 		name: "Charti Berry",
 		desc: "Halves damage taken from a supereffective Rock-type attack. Single use.",
-	},
-	chatotite: {
-		name: "Chatotite",
-		desc: "If held by a Chatot, this item allows it to Mega Evolve in battle.",
 	},
 	cheriberry: {
 		name: "Cheri Berry",
@@ -296,18 +284,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Cracked Pot",
 		desc: "Evolves Sinistea into Polteageist when used.",
 	},
-	crawdite: {
-		name: "Crawdite",
-		desc: "If held by a Crawdaunt, this item allows it to Mega Evolve in battle.",
-	},
-	cryogonalite: {
-		name: "Cryogonalite",
-		desc: "If held by a Cryogonal, this item allows it to Mega Evolve in battle.",
-	},
-	crystalpiece: {
-		name: "Crystal Piece",
-		desc: "Changes the form of Arceus, Giratina, and Regigigas.",
-	},
 	custapberry: {
 		name: "Custap Berry",
 		desc: "Holder moves first in its priority bracket when at 1/4 max HP or less. Single use.",
@@ -333,10 +309,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Darkinium Z",
 		desc: "If holder has a Dark move, this item allows it to use a Dark Z-Move.",
 	},
-	darkrock: {
-		name: "Dark Rock",
-		desc: "	Lengthens duration of New Moon and Noctem from 5 turns to 8 turns when used by the holder.",
-	},
 	dawnstone: {
 		name: "Dawn Stone",
 		desc: "Evolves male Kirlia into Gallade and female Snorunt into Froslass when used.",
@@ -356,90 +328,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		desc: "If held by a Clamperl, its Sp. Atk is doubled. Evolves Clamperl into Huntail when traded.",
 		shortDesc: "If held by a Clamperl, its Sp. Atk is doubled.",
 	},
-	deltabisharpite: {
-		name: "Delta Bisharpite",
-		desc: "If held by Delta Bisharp, this item allows it to Mega Evolve in battle.",
-	},
-	deltablastoisinite: {
-		name: "Delta Blastoisinite",
-		desc: "If held by Delta Blastoise, this item allows it to Mega Evolve in battle.",
-	},
-	deltacameruptite: {
-		name: "Delta Cameruptite",
-		desc: "If held by Delta Camerupt, this item allows it to Mega Evolve in battle.",
-	},
-	deltacharizardite: {
-		name: "Delta Charizardite",
-		desc: "If held by Delta Charizard, this item allows it to Mega Evolve in battle.",
-	},
-	deltaetigirafarigite: {
-		name: "Delta Etigirafarigite",
-		desc: "If held by Delta Girafarig, this item allows it to Mega Evolve in battle.",
-	},
-	deltafroslassite: {
-		name: "Delta Froslassite",
-		desc: "If held by Delta Froslass, this item allows it to Mega Evolve in battle.",
-	},
-	deltagardevoirite: {
-		name: "Delta Gardevoirite",
-		desc: "If held by Delta Gardevoir, this item allows it to Mega Evolve in battle.",
-	},
-	deltagalladite: {
-		name: "Delta Galladite",
-		desc: "If held by Delta Gallade, this item allows it to Mega Evolve in battle.",
-	},
-	deltaglalitite: {
-		name: "Delta Glalitite",
-		desc: "If held by Delta Glalie, this item allows it to Mega Evolve in battle.",
-	},
-	deltalopunnite: {
-		name: "Delta Lopunnite",
-		desc: "If held by Delta Lopunny, this item allows it to Mega Evolve in battle.",
-	},
-	deltalucarionite: {
-		name: "Delta Lucationite",
-		desc: "If held by Delta Lucario, this item allows it to Mega Evolve in battle.",
-	},
-	deltamawilite: {
-		name: "Delta Mawilite",
-		desc: "If held by Delta Mawile, this item allows it to Mega Evolve in battle.",
-	},
-	deltamedichamite: {
-		name: "Delta Medichamite",
-		desc: "If held by Delta Medicham, this item allows it to Mega Evolve in battle.",
-	},
-	deltamilotite: {
-		name: "Delta Milotite",
-		desc: "If held by a Delta Milotic, this item allows it to Mega Evolve in battle.",
-	},
-	deltapidgeotite: {
-		name: "Delta Pidgeotite",
-		desc: "If held by Delta Pidgeot, this item allows it to Mega Evolve in battle.",
-	},
-	deltasablenite: {
-		name: "Delta Sablenite",
-		desc: "If held by Delta Sableye, this item allows it to Mega Evolve in battle.",
-	},
-	deltascizorite: {
-		name: "Delta Scizorite",
-		desc: "If held by Delta Scizor, this item allows it to Mega Evolve in battle.",
-	},
-	deltasunflorite: {
-		name: "Delta Sunflorite",
-		desc: "If held by Delta Sunflora, this item allows it to Mega Evolve in battle.",
-	},
-	deltatyphlosionite: {
-		name: "Delta Typhlosionite",
-		desc: "If held by Delta Typhlosion, this item allows it to Mega Evolve in battle.",
-	},
-	deltavenusaurite: {
-		name: "Delta Venusaurite",
-		desc: "If held by Delta Venusaur, this item allows it to Mega Evolve in battle.",
-	},
-	deltavolcaronaarmor: {
-		name: "Delta Volcarona Armor",
-		desc: "Increases Delta Volcarona's base Defense stat from 65 to 85 and base Special Defense stat from 105 to 137 when held.",
-	},
 	destinyknot: {
 		name: "Destiny Knot",
 		desc: "If holder becomes infatuated, the other Pokemon also becomes infatuated.",
@@ -455,10 +343,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	domefossil: {
 		name: "Dome Fossil",
 		desc: "Can be revived into Kabuto.",
-	},
-	donphanite: {
-		name: "Donphanite",
-		desc: "If held by a Donphan, this item allows it to Mega Evolve in battle.",
 	},
 	dousedrive: {
 		name: "Douse Drive",
@@ -532,10 +416,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Earth Plate",
 		desc: "Holder's Ground-type attacks have 1.2x power. Judgment is Ground type.",
 	},
-	eevite: {
-		name: "Eevite",
-		desc: "If held by a Eevee, this item allows it to Mega Evolve in battle.",
-	},
 	eeviumz: {
 		name: "Eevium Z",
 		desc: "If held by an Eevee with Last Resort, it can use Extreme Evoboost.",
@@ -587,10 +467,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "No competitive use.",
 		},
 	},
-	etigirafarigite: {
-		name: "Etigirafarigite",
-		desc: "If held by a Girafarig, this item allows it to Mega Evolve in battle.",
-	},
 	eviolite: {
 		name: "Eviolite",
 		desc: "If holder's species can evolve, its Defense and Sp. Def are 1.5x.",
@@ -614,10 +490,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	fastball: {
 		name: "Fast Ball",
 		desc: "A Poke Ball that makes it easier to catch Pokemon which are quick to run away.",
-	},
-	feraligatite: {
-		name: "Feraligatite",
-		desc: "If held by a Feraligatr, this item allows it to Mega Evolve in battle.",
 	},
 	fightinggem: {
 		name: "Fighting Gem",
@@ -684,14 +556,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Flower Sweet",
 		desc: "Evolves Milcery into Alcremie when held and spun around.",
 	},
-	flygonarmor: {
-		name: "Flygon Armor",
-		desc: "Increases Flygon's base Defense stat from 80 to 104 and base Special Defense stat from 80 to 104 when held.",
-	},
-	flygonite: {
-		name: "Flygonite",
-		desc: "If held by a Flygon, this item allows it to Mega Evolve in battle."
-	},
 	flyinggem: {
 		name: "Flying Gem",
 		desc: "Holder's first successful Flying-type attack will have 1.3x power. Single use.",
@@ -744,10 +608,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	friendball: {
 		name: "Friend Ball",
 		desc: "A Poke Ball that makes caught Pokemon more friendly.",
-	},
-	froslassite: {
-		name: "Froslassite",
-		desc: "If held by a Froslass, this item allows it to Mega Evolve in battle.",
 	},
 	fullincense: {
 		name: "Full Incense",
@@ -803,10 +663,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	goldbottlecap: {
 		name: "Gold Bottle Cap",
 		desc: "Used for Hyper Training. All of a Pokemon's stats are calculated with an IV of 31.",
-	},
-	gothitite: {
-		name: "Gothitite",
-		desc: "If held by a Gothitelle, this item allows it to Mega Evolve in battle.",
 	},
 	grassgem: {
 		name: "Grass Gem",
@@ -876,10 +732,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Holder's Rock-type attacks have 1.1x power.",
 		},
 	},
-	haxorite: {
-		name: "Haxorite",
-		desc: "If held by a Haxorus, this item allows it to Mega Evolve in battle.",
-	},
 	healball: {
 		name: "Heal Ball",
 		desc: "A remedial Poke Ball that restores the caught Pokemon's HP and status problem.",
@@ -911,10 +763,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	houndoominite: {
 		name: "Houndoominite",
 		desc: "If held by a Houndoom, this item allows it to Mega Evolve in battle.",
-	},
-	hydreigonite: {
-		name: "Hydreigonite",
-		desc: "If held by a Hydreigon, this item allows it to Mega Evolve in battle.",
 	},
 	iapapaberry: {
 		name: "Iapapa Berry",
@@ -984,10 +832,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Jaw Fossil",
 		desc: "Can be revived into Tyrunt.",
 	},
-	jirachite: {
-		name: "Jirachite",
-		desc: "If held by a Jirachi, this item allows it to Mega Evolve in battle.",
-	},
 	kasibberry: {
 		name: "Kasib Berry",
 		desc: "Halves damage taken from a supereffective Ghost-type attack. Single use.",
@@ -1048,10 +892,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Evolves Gloom into Vileplume, Weepinbell into Victreebel, Exeggcute into Exeggutor or Alolan Exeggutor, Nuzleaf into Shiftry, and Pansage into Simisage when used.",
 		},
 	},
-	leavannyarmor: {
-		name: "Leavanny Armor",
-		desc: "Increases Leavanny's base Defense stat from 80 to 104 and base Special Defense stat from 80 to 104 when held.",
-	},
 	leek: {
 		name: "Leek",
 		desc: "If held by a Farfetch’d or Sirfetch’d, its critical hit ratio is raised by 2 stages.",
@@ -1085,6 +925,9 @@ export const ItemsText: {[k: string]: ItemText} = {
 	lightball: {
 		name: "Light Ball",
 		desc: "If held by a Pikachu, its Attack and Sp. Atk are doubled.",
+		gen4: {
+			desc: "If held by a Pikachu, its attacks have their power doubled.",
+		},
 		gen3: {
 			desc: "If held by a Pikachu, its Special Attack is doubled.",
 		},
@@ -1151,10 +994,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Macho Brace",
 		desc: "Holder's Speed is halved. The Klutz Ability does not ignore this effect.",
 	},
-	magcargonite: {
-		name: "Magcargonite",
-		desc: "If held by a Magcargo, this item allows it to Mega Evolve in battle.",
-	},
 	magmarizer: {
 		name: "Magmarizer",
 		desc: "Evolves Magmar into Magmortar when traded.",
@@ -1192,10 +1031,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Maranga Berry",
 		desc: "Raises holder's Sp. Def by 1 stage after it is hit by a special attack. Single use.",
 	},
-	marowite: {
-		name: "Marowite",
-		desc: "If held by a Marowak, this item allows it to Mega Evolve in battle.",
-	},
 	marshadiumz: {
 		name: "Marshadium Z",
 		desc: "If held by Marshadow with Spectral Thief, it can use Soul-Stealing 7-Star Strike.",
@@ -1215,10 +1050,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	medichamite: {
 		name: "Medichamite",
 		desc: "If held by a Medicham, this item allows it to Mega Evolve in battle.",
-	},
-	meganiumite: {
-		name: "Meganiumite",
-		desc: "If held by a Meganium, this item allows it to Mega Evolve in battle.",
 	},
 	mentalherb: {
 		name: "Mental Herb",
@@ -1266,21 +1097,9 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Mewtwonite Y",
 		desc: "If held by a Mewtwo, this item allows it to Mega Evolve in battle.",
 	},
-	mewtwoarmor: {
-		name: "Mewtwo Armor",
-		desc: "Changes Mewtwo's ability to Hubris when held. Does not offer any increase to defensive stats.",
-	},
 	micleberry: {
 		name: "Micle Berry",
 		desc: "Holder's next move has 1.2x accuracy when at 1/4 max HP or less. Single use.",
-	},
-	milotite: {
-		name: "Milotite",
-		desc: "If held by a Milotic, this item allows it to Mega Evolve in battle.",
-	},
-	miltankite: {
-		name: "Miltankite",
-		desc: "If held by a Miltank, this item allows it to Mega Evolve in battle.",
 	},
 	mimikiumz: {
 		name: "Mimikium Z",
@@ -1457,14 +1276,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Poke Ball",
 		desc: "A device for catching wild Pokemon. It is designed as a capsule system.",
 	},
-	politoedite: {
-		name: "Politoedite",
-		desc: "If held by a Politoed, this item allows it to Mega Evolve in battle.",
-	},
-	poliwrathite: {
-		name: "Poliwrathite",
-		desc: "If held by a Poliwrath, this item allows it to Mega Evolve in battle.",
-	},
 	pomegberry: {
 		name: "Pomeg Berry",
 		desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
@@ -1605,10 +1416,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Repeat Ball",
 		desc: "A Poke Ball that works well on Pokemon species that were previously caught.",
 	},
-	reuniclite: {
-		name: "Reuniclite",
-		desc: "If held by a Reuniclus, this item allows it to Mega Evolve in battle.",
-	},
 	ribbonsweet: {
 		name: "Ribbon Sweet",
 		desc: "Evolves Milcery into Alcremie when held and spun around.",
@@ -1723,10 +1530,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Holder's Water-type attacks have 1.05x power.",
 		},
 	},
-	shadowmewtwonite: {
-		name: "Shadow Mewtwonite",
-		desc: "If held by a Shadow Mewtwo, this item allows it to Mega Evolve in battle.",
-	},
 	sharpbeak: {
 		name: "Sharp Beak",
 		desc: "Holder's Flying-type attacks have 1.2x power.",
@@ -1752,10 +1555,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Shiny Stone",
 		desc: "Evolves Togetic into Togekiss, Roselia into Roserade, Minccino into Cinccino, and Floette into Florges when used.",
 		shortDesc: "Evolves certain species of Pokemon when used.",
-	},
-	shiftrite: {
-		name: "Shiftrite",
-		desc: "If held by a Shiftry, this item allows it to Mega Evolve in battle."
 	},
 	shockdrive: {
 		name: "Shock Drive",
@@ -1839,10 +1638,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Spelon Berry",
 		desc: "Cannot be eaten by the holder. No effect when eaten with Bug Bite or Pluck.",
 	},
-	spiritombite: {
-		name: "Spiritombite",
-		desc: "If held by a Spiritomb, this item allows it to Mega Evolve in battle.",
-	},
 	splashplate: {
 		name: "Splash Plate",
 		desc: "Holder's Water-type attacks have 1.2x power. Judgment is Water type.",
@@ -1865,10 +1660,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	},
 	steelixite: {
 		name: "Steelixite",
-		desc: "If held by a Steelix, this item allows it to Mega Evolve in battle.",
-	},
-	steelixitefire: {
-		name: "Steelixite Fire",
 		desc: "If held by a Steelix, this item allows it to Mega Evolve in battle.",
 	},
 	steelgem: {
@@ -1904,22 +1695,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 	strawberrysweet: {
 		name: "Strawberry Sweet",
 		desc: "Evolves Milcery into Alcremie when held and spun around.",
-	},
-	stunfiskite: {
-		name: "Stunfiskite",
-		desc: "If held by a Stunfisk, this item allows it to Mega Evolve in battle.",
-	},
-	sudowoodite: {
-		name: "Sudowoodite",
-		desc: "If held by a Sudowoodo, this item allows it to Mega Evolve in battle.",
-	},
-	sunfloritef: {
-		name: "Sunflorite F",
-		desc: "If held by a Female Sunflora, this item allows it to Mega Evolve in battle.",
-	},
-	sunfloritem: {
-		name: "Sunflorite M",
-		desc: "If held by a Male Sunflora, this item allows it to Mega Evolve in battle.",
 	},
 	sunstone: {
 		name: "Sun Stone",
@@ -2382,10 +2157,6 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "TR99",
 		desc: "Teaches certain Pokemon the move Body Press. One use.",
 	},
-	trickrock: {
-		name: "Trick Rock",
-		desc: "Lengthens duration of Trick Room from 5 turns to 8 turns when used by the holder.",
-	},
 	twistedspoon: {
 		name: "Twisted Spoon",
 		desc: "Holder's Psychic-type attacks have 1.2x power.",
@@ -2393,17 +2164,9 @@ export const ItemsText: {[k: string]: ItemText} = {
 			desc: "Holder's Psychic-type attacks have 1.1x power.",
 		},
 	},
-	tyranitararmor: {
-		name: "Tyranitar Armor",
-		desc: "Increases Tyranitar's base Defense stat from 110 to 143 and base Special Defense stat from 100 to 130 when held.",
-	},
 	tyranitarite: {
 		name: "Tyranitarite",
 		desc: "If held by a Tyranitar, this item allows it to Mega Evolve in battle.",
-	},
-	typhlosionite: {
-		name: "Typhlosionite",
-		desc: "If held by a Typhlosion, this item allows it to Mega Evolve in battle.",
 	},
 	ultraball: {
 		name: "Ultra Ball",
@@ -2505,21 +2268,9 @@ export const ItemsText: {[k: string]: ItemText} = {
 		name: "Zap Plate",
 		desc: "Holder's Electric-type attacks have 1.2x power. Judgment is Electric type.",
 	},
-	zebstrikite: {
-		name: "Zebstrikite",
-		desc: "If held by a Zebstrika, this item allows it to Mega Evolve in battle.",
-	},
-	zekromarmor: {
-		name: "Zekrom Armor",
-		desc: "Increases Zekrom's base Defense stat from 120 to 156 and base Special Defense stat from 100 to 130 when held.",
-	},
 	zoomlens: {
 		name: "Zoom Lens",
 		desc: "The accuracy of attacks by the holder is 1.2x if it moves after its target.",
-	},
-	zoronite: {
-		name: "Zoronite",
-		desc: "It strangely looks like someone you know.",
 	},
 
 	// Gen 2 items
@@ -2584,5 +2335,9 @@ export const ItemsText: {[k: string]: ItemText} = {
 	crucibellite: {
 		name: "Crucibellite",
 		desc: "If held by a Crucibelle, this item allows it to Mega Evolve in battle.",
+	},
+	vilevial: {
+		name: "Vile Vial",
+		desc: "If held by a Venomicon, its Poison- and Flying-type attacks have 1.2x power.",
 	},
 };
