@@ -5,7 +5,6 @@
 import {Utils} from '../../lib';
 
 const MINUTES = 60000;
-const MAX_QUESTIONS = 10;
 
 interface PollAnswer {
 	name: string; votes: number; correct?: boolean;
@@ -84,7 +83,7 @@ export class Poll extends Rooms.MinorActivity {
 	deselect(user: User, option: number) {
 		const userid = user.id;
 		const pendingVote = this.pendingVotes[userid];
-		if (!pendingVote?.includes(option)) {
+		if (!pendingVote || !pendingVote.includes(option)) {
 			throw new Chat.ErrorMessage(this.room.tr`That option is not selected.`);
 		}
 		pendingVote.splice(pendingVote.indexOf(option), 1);
@@ -96,7 +95,7 @@ export class Poll extends Rooms.MinorActivity {
 		const ip = user.latestIp;
 		const userid = user.id;
 
-		if (userid in this.voters || (!Config.noipchecks && ip in this.voterIps)) {
+		if (userid in this.voters || ip in this.voterIps) {
 			delete this.pendingVotes[userid];
 			throw new Chat.ErrorMessage(this.room.tr`You have already voted for this poll.`);
 		}
@@ -165,7 +164,7 @@ export class Poll extends Rooms.MinorActivity {
 	}
 
 	static generateResults(
-		options: Rooms.MinorActivityData, room: Room,
+		options: MinorActivityData, room: Room,
 		ended = false, choice: number[] | null = null
 	) {
 		const iconText = options.isQuiz ?
@@ -352,7 +351,7 @@ export class Poll extends Rooms.MinorActivity {
 	}
 }
 
-export const commands: Chat.ChatCommands = {
+export const commands: ChatCommands = {
 	poll: {
 		htmlcreate: 'new',
 		create: 'new',
@@ -360,7 +359,6 @@ export const commands: Chat.ChatCommands = {
 		htmlcreatemulti: 'new',
 		queue: 'new',
 		queuehtml: 'new',
-		htmlqueue: 'new',
 		queuemulti: 'new',
 		htmlqueuemulti: 'new',
 		new(target, room, user, connection, cmd, message) {
@@ -401,8 +399,8 @@ export const commands: Chat.ChatCommands = {
 			if (supportHTML) params = params.map(parameter => this.checkHTML(parameter));
 
 			const questions = params.splice(1);
-			if (questions.length > MAX_QUESTIONS) {
-				return this.errorReply(this.tr`Too many options for poll (maximum is ${MAX_QUESTIONS}).`);
+			if (questions.length > 8) {
+				return this.errorReply(this.tr`Too many options for poll (maximum is 8).`);
 			}
 
 			if (new Set(questions).size !== questions.length) {
@@ -427,7 +425,7 @@ export const commands: Chat.ChatCommands = {
 		newhelp: [
 			`/poll create [question], [option1], [option2], [...] - Creates a poll. Requires: % @ # &`,
 			`/poll createmulti [question], [option1], [option2], [...] - Creates a poll, allowing for multiple answers to be selected. Requires: % @ # &`,
-			`To queue a poll, use [queue], [queuemulti], [queuehtml], or [htmlqueuemulti].`,
+			`To queue a poll, use [queue], [queuemulti], or [htmlqueuemulti].`,
 			`Polls can be used as quiz questions. To do this, prepend all correct answers with a +.`,
 		],
 
@@ -438,18 +436,26 @@ export const commands: Chat.ChatCommands = {
 		},
 		viewqueuehelp: [`/viewqueue - view the queue of polls in the room. Requires: % @ # &`],
 
-		deletequeue(target, room, user) {
-			room = this.requireRoom();
+		deletequeue(target, room, user, connection, cmd) {
 			if (!target) return this.parse('/help deletequeue');
+
+			const [slotString, targetRoomid] = target.split(',');
+
+			if (targetRoomid) {
+				room = Rooms.search(targetRoomid)!;
+				if (!room) this.errorReply(this.tr`Room "${targetRoomid}" not found.`);
+			} else {
+				room = this.requireRoom();
+			}
 
 			this.checkCan('mute', null, room);
 			const queue = room.getMinorActivityQueue();
 			if (!queue) {
 				return this.errorReply(this.tr`The queue is already empty.`);
 			}
-			const slot = parseInt(target);
+			const slot = parseInt(slotString);
 			if (isNaN(slot)) {
-				return this.errorReply(this.tr`Can't delete poll at slot ${target} - "${target}" is not a number.`);
+				return this.errorReply(this.tr`Can't delete poll at slot ${slotString} - "${slotString}" is not a number.`);
 			}
 			if (!queue[slot - 1]) return this.errorReply(this.tr`There is no poll in queue at slot ${slot}.`);
 
@@ -534,7 +540,7 @@ export const commands: Chat.ChatCommands = {
 			} else {
 				if (!this.runBroadcast()) return;
 				if (poll.timeout) {
-					return this.sendReply(this.tr`The poll timer is on and will end in ${Chat.toDurationString(poll.timeoutMins * MINUTES)}.`);
+					return this.sendReply(this.tr`The poll timer is on and will end in ${Chat.toDurationString(poll.timeoutMins)}.`);
 				} else {
 					return this.sendReply(this.tr`The poll timer is off.`);
 				}
@@ -605,7 +611,7 @@ export const commands: Chat.ChatCommands = {
 	},
 };
 
-export const pages: Chat.PageTable = {
+export const pages: PageTable = {
 	pollqueue(args, user) {
 		const room = this.requireRoom();
 
@@ -621,7 +627,7 @@ export const pages: Chat.PageTable = {
 			const number = i + 1; // for translation convienence
 			const button = (
 				`<strong>${this.tr`#${number} in queue`} </strong>` +
-				`<button class="button" name="send" value="/msgroom ${room.roomid},/poll deletequeue ${i + 1}">` +
+				`<button class="button" name="send" value="/poll deletequeue ${i + 1},${room.roomid}">` +
 				`(${this.tr`delete`})</button>`
 			);
 			buf += `<hr />`;
