@@ -170,8 +170,8 @@ Y929lRybWEiKUr+4Yw2O1W0CAwEAAQ==
  *   Don't change this setting - there aren't any other options right now
  */
 exports.routes = {
-	root: 'neodrafttest.herokuapp.com',
-	client: 'neodraft.herokuapp.com',
+	root: 'neotempserver.herokuapp.com',
+	client: 'neotemp.herokuapp.com',
 	dex: 'dex.pokemonshowdown.com',
 	replays: 'replay.pokemonshowdown.com',
 };
