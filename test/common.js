@@ -3,7 +3,7 @@
 const path = require('path');
 const fs = require('fs');
 const assert = require('./assert');
-const Sim = require('./../sim');
+const Sim = require('./../.sim-dist');
 const Dex = Sim.Dex;
 
 const cache = new Map();
@@ -42,7 +42,7 @@ class TestTools {
 	}
 
 	getFormat(options) {
-		if (options.formatid) return Dex.formats.get(options.formatid);
+		if (options.formatid) return Dex.getFormat(options.formatid);
 
 		const gameType = Dex.toID(options.gameType || 'singles');
 		const customRules = [
@@ -57,16 +57,14 @@ class TestTools {
 		].filter(Boolean);
 		const customRulesID = customRules.length ? `@@@${customRules.join(',')}` : ``;
 
-		let basicFormat = this.currentMod === 'base' && gameType === 'singles' ? 'Anything Goes' : 'Custom Game';
-		if (this.currentMod === 'gen1stadium') basicFormat = 'OU';
-		if (gameType === 'freeforall' || gameType === 'multi') basicFormat = 'randombattle';
+		const basicFormat = this.currentMod === 'base' && gameType === 'singles' ? 'Anything Goes' : 'Custom Game';
 		const gameTypePrefix = gameType === 'singles' ? '' : capitalize(gameType) + ' ';
 		const formatName = `${this.modPrefix}${gameTypePrefix}${basicFormat}${customRulesID}`;
 
 		let format = formatsCache.get(formatName);
 		if (format) return format;
 
-		format = Dex.formats.get(formatName);
+		format = Dex.getFormat(formatName);
 		if (!format.exists) throw new Error(`Unidentified format: ${formatName}`);
 
 		formatsCache.set(formatName, format);
@@ -129,14 +127,6 @@ class TestTools {
 			);
 			out.end();
 		});
-	}
-	hasModule(mod) {
-		try {
-			require(mod);
-			return true;
-		} catch {
-			return false;
-		}
 	}
 }
 
