@@ -2,12 +2,7 @@
  * PRNG
  * Pokemon Showdown - http://pokemonshowdown.com/
  *
- * This simulates the on-cartridge PRNG used in the real games.
- *
- * In addition to potentially allowing us to read replays from in-game,
- * this also makes it possible to record an "input log" (a seed +
- * initial teams + move/switch decisions) and "replay" a simulation to
- * get the same result.
+ * This file handles the random number generator for battles.
  *
  * @license MIT license
  */
@@ -110,7 +105,7 @@ export class PRNG {
 	}
 
 	/**
-	 * A Fisher-Yates shuffle. This is how the game resolves speed ties.
+	 * This is how the game resolves speed ties.
 	 *
 	 * At least according to V4 in
 	 * https://github.com/smogon/pokemon-showdown/issues/1157#issuecomment-214454873

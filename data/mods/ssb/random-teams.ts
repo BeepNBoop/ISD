@@ -126,6 +126,12 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Broadside Barrage',
 		evs: {atk: 252, def: 4, spe: 252}, nature: 'Jolly',
 	},
+	Averardo: {
+		species: 'Hattrem', ability: 'Magic Hat', item: 'Eviolite', gender: 'M',
+		moves: ['Nuzzle', 'Flamethrower', 'Healing Wish'],
+		signatureMove: 'Hat of Wisdom',
+		evs: {hp: 252, def: 4, spd: 252}, ivs: {atk: 0}, nature: 'Sassy',
+	},
 	'awa!': {
 		species: 'Lycanroc', ability: 'Sand Rush', item: 'Life Orb', gender: 'F',
 		moves: ['Earthquake', 'Close Combat', 'Swords Dance'],
@@ -151,7 +157,7 @@ export const ssbSets: SSBSets = {
 		evs: {hp: 252, spa: 252, spd: 4}, ivs: {atk: 0}, nature: 'Modest', shiny: true,
 	},
 	Blaz: {
-		species: 'Carbink', ability: 'Solid Rock', item: 'Leftovers', gender: 'N',
+		species: 'Carbink', ability: 'Why Worry', item: 'Leftovers', gender: 'N',
 		moves: ['Cosmic Power', 'Body Press', 'Recover'],
 		signatureMove: 'Bleak December',
 		evs: {hp: 4, def: 252, spd: 252}, ivs: {atk: 0}, nature: 'Careful', shiny: true,
@@ -176,7 +182,7 @@ export const ssbSets: SSBSets = {
 	},
 	Cake: {
 		species: 'Dunsparce', ability: 'Wonder Guard', item: 'Shell Bell', gender: 'M',
-		moves: ['Haze', 'Jungle Healing', ['Baton Pass', 'Poison Gas', 'Corrosive Gas', 'Magic Powder', 'Speed Swap', 'Spite', 'Screech', 'Trick Room', 'Heal Block', 'Geomancy']],
+		moves: ['Haze', 'Life Dew', ['Poison Gas', 'Corrosive Gas', 'Magic Powder', 'Speed Swap', 'Spite', 'Refresh', 'Screech', 'Trick Room', 'Heal Block', 'Geomancy']],
 		signatureMove: 'Kevin',
 		evs: {hp: 252, atk: 252, spd: 4}, nature: 'Adamant',
 	},
@@ -354,9 +360,9 @@ export const ssbSets: SSBSets = {
 		evs: {atk: 252, def: 4, spe: 252}, nature: 'Jolly',
 	},
 	instruct: {
-		species: 'Riolu', ability: 'Truant', item: 'Heavy-Duty Boots', gender: '',
+		species: 'Riolu', ability: 'Truant', item: 'Soda Pop', gender: '',
 		moves: ['Explosion', 'Lunar Dance', 'Memento'],
-		signatureMove: 'Soda Break',
+		signatureMove: 'Fake Out',
 		evs: {hp: 252, atk: 4, spe: 252}, nature: 'Jolly',
 	},
 	Iyarito: {
@@ -439,7 +445,7 @@ export const ssbSets: SSBSets = {
 		evs: {spa: 252, spd: 4, spe: 252}, ivs: {atk: 0}, nature: 'Timid',
 	},
 	Lamp: {
-		species: 'Lampent', ability: 'Soul-Heart', item: 'Eviolite', gender: 'M',
+		species: 'Lampent', ability: 'Soul Heart', item: 'Eviolite', gender: 'M',
 		moves: ['Nasty Plot', 'Searing Shot', 'Recover'],
 		signatureMove: 'Soul Swap',
 		evs: {def: 4, spa: 252, spe: 252}, ivs: {atk: 0}, nature: 'Timid',
@@ -460,17 +466,11 @@ export const ssbSets: SSBSets = {
 		signatureMove: '/nexthunt',
 		evs: {hp: 4, atk: 252, spe: 252}, nature: 'Adamant', shiny: true,
 	},
-	Lunala: {
-		species: 'Hattrem', ability: 'Magic Hat', item: 'Eviolite', gender: 'F',
-		moves: ['Nuzzle', 'Flamethrower', 'Healing Wish'],
-		signatureMove: 'Hat of Wisdom',
-		evs: {hp: 252, def: 4, spd: 252}, ivs: {atk: 0}, nature: 'Sassy',
-	},
 	'Mad Monty ¾°': {
 		species: 'Zekrom', ability: 'Petrichor', item: 'Damp Rock', gender: 'N',
 		moves: ['Bolt Strike', 'Dragon Claw', 'Liquidation'],
 		signatureMove: 'Ca-LLAMA-ty',
-		evs: {atk: 252, def: 4, spe: 252}, nature: 'Jolly', shiny: true,
+		evs: {atk: 252, def: 4, spe: 252}, ivs: {def: 0}, nature: 'Jolly', shiny: true,
 	},
 	MajorBowman: {
 		species: 'Weezing-Galar', ability: 'Neutralizing Gas', item: 'Black Sludge', gender: 'M',
@@ -611,6 +611,12 @@ export const ssbSets: SSBSets = {
 		signatureMove: 'Croak',
 		evs: {hp: 248, def: 8, spd: 252}, ivs: {atk: 0}, nature: 'Calm',
 	},
+	quadrophenic: {
+		species: 'Dodrio', ability: 'Extreme Ways', item: 'Choice Band', gender: 'N',
+		moves: ['Dragon Ascent', 'Close Combat', 'U-turn'],
+		signatureMove: 'Triple Threat',
+		evs: {atk: 252, spd: 4, spe: 252}, nature: 'Jolly',
+	},
 	Rabia: {
 		species: 'Mew', ability: 'Psychic Surge', item: 'Life Orb', gender: 'M',
 		moves: ['Nasty Plot', ['Flamethrower', 'Fire Blast'], 'Roost'],
@@ -673,7 +679,7 @@ export const ssbSets: SSBSets = {
 		evs: {atk: 204, spa: 200, spe: 104}, nature: 'Hasty',
 		skip: 'Robb576', // This set is transformed into by The Numbers Game ability
 	},
-	Sectonia: {
+	SectoniaServant: {
 		species: 'Reuniclus', ability: 'Royal Aura', item: 'Leftovers', gender: 'M',
 		moves: ['Eerie Spell', 'Moonblast', 'Recover'],
 		signatureMove: 'Homunculus\'s Vanity',
@@ -863,19 +869,12 @@ export const ssbSets: SSBSets = {
 
 export class RandomStaffBrosTeams extends RandomTeams {
 	randomStaffBrosTeam(options: {inBattle?: boolean} = {}) {
-		this.enforceNoDirectCustomBanlistChanges();
-
 		const team: PokemonSet[] = [];
 		const debug: string[] = []; // Set this to a list of SSB sets to override the normal pool for debugging.
-		const ruleTable = this.dex.formats.getRuleTable(this.format);
-		const monotype = ruleTable.has('sametypeclause') ? this.sample([...this.dex.types.names()]) : false;
-		let pool = debug.length ? debug : Object.keys(ssbSets);
-		if (monotype && !debug.length) {
-			pool = pool.filter(x => this.dex.species.get(ssbSets[x].species).types.includes(monotype));
-		}
+		const pool = debug.length ? debug : Object.keys(ssbSets);
 		const typePool: {[k: string]: number} = {};
 		let depth = 0;
-		while (pool.length && team.length < this.maxTeamSize) {
+		while (pool.length && team.length < 6) {
 			if (depth >= 200) throw new Error(`Infinite loop in Super Staff Bros team generation.`);
 			depth++;
 			const name = this.sampleNoReplace(pool);
@@ -883,19 +882,12 @@ export class RandomStaffBrosTeams extends RandomTeams {
 			if (ssbSet.skip) continue;
 
 			// Enforce typing limits
-			if (!(debug.length || monotype)) { // Type limits are ignored when debugging or for monotype variations.
-				const species = this.dex.species.get(ssbSet.species);
-				if (this.forceMonotype && !species.types.includes(this.forceMonotype)) continue;
-
-				const weaknesses = [];
-				for (const type of this.dex.types.names()) {
-					const typeMod = this.dex.getEffectiveness(type, species.types);
-					if (typeMod > 0) weaknesses.push(type);
-				}
+			if (!debug.length) { // Type limits are ignored when debugging
+				const types = this.dex.getSpecies(ssbSet.species).types;
 				let rejected = false;
-				for (const type of weaknesses) {
+				for (const type of types) {
 					if (typePool[type] === undefined) typePool[type] = 0;
-					if (typePool[type] >= 3) {
+					if (typePool[type] >= 2) {
 						// Reject
 						rejected = true;
 						break;
@@ -910,7 +902,7 @@ export class RandomStaffBrosTeams extends RandomTeams {
 				}
 				if (rejected) continue;
 				// Update type counts
-				for (const type of weaknesses) {
+				for (const type of types) {
 					typePool[type]++;
 				}
 			}
@@ -944,9 +936,9 @@ export class RandomStaffBrosTeams extends RandomTeams {
 
 			// Team specific tweaks occur here
 			// Swap last and second to last sets if last set has Illusion
-			if (team.length === this.maxTeamSize && set.ability === 'Illusion') {
-				team[this.maxTeamSize - 1] = team[this.maxTeamSize - 2];
-				team[this.maxTeamSize - 2] = set;
+			if (team.length === 6 && set.ability === 'Illusion') {
+				team[5] = team[4];
+				team[4] = set;
 			}
 		}
 		return team;

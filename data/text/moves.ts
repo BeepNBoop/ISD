@@ -26,6 +26,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "No additional effect.",
 		shortDesc: "Usually goes first.",
 	},
+	achillesheel: {
+		name: "Achilles Heel",
+		desc: "The user identifies a weaknesses in its target, dealing Super Effective damage to all that are not immune to this move.",
+		shortDesc: "Deals super effective damage, unless immune.",
+	},
 	acid: {
 		name: "Acid",
 		desc: "Has a 10% chance to lower the target's Special Defense by 1 stage.",
@@ -133,6 +138,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Ancient Power",
 		desc: "Has a 10% chance to raise the user's Attack, Defense, Special Attack, Special Defense, and Speed by 1 stage.",
 		shortDesc: "10% chance to raise all stats by 1 (not acc/eva).",
+	},
+	ancientroar: {
+		name: "Ancient Roar",
+		desc: "The user's voice shakes with a primal roar, damaging its foes with pure fear.",
+		shortDesc: "No additional effect.",
 	},
 	appleacid: {
 		name: "Apple Acid",
@@ -603,9 +613,6 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "If this attack does not miss and whether or not the target is immune, the effects of Reflect and Light Screen end for the target's side of the field before damage is calculated.",
 			shortDesc: "Destroys screens, even if the target is immune.",
 		},
-		gen3: {
-			desc: "If this attack does not miss and whether or not the target is immune, the effects of Reflect and Light Screen end for the opponent's side of the field before damage is calculated.",
-		},
 
 		activate: "  [POKEMON] shattered [TEAM]'s protections!",
 	},
@@ -913,13 +920,13 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "The user's type changes to match a type that resists or is immune to the type of the last move used against the user, if it was successful against the user, but not either of its current types. The determined type of the move is used rather than the original type, but considers Struggle as Normal. Fails if the last move used against the user was not successful, or if this move would only be able to select one of the user's current types.",
 		},
 		gen2: {
-			desc: "The user's type changes to match a type that resists or is immune to the type of the last move used by the opposing Pokemon, even if it is one of the user's current types. The original type of the move is used rather than the determined type. Fails if the opposing Pokemon has not used a move.",
+			desc: "The user's type changes to match a type that resists or is immune to the type of the last move used by the opposing Pokemon, even it is one of the user's current types. The original type of the move is used rather than the determined type. Fails if the opposing Pokemon has not used a move.",
 			shortDesc: "Changes user's type to resist the foe's last move.",
 		},
 	},
 	copycat: {
 		name: "Copycat",
-		desc: "The user uses the last move used by any Pokemon, including itself. The base move of Max and G-Max Moves is considered for this purpose. Fails if no move has been used, or if the last move used was Assist, Baneful Bunker, Beak Blast, Behemoth Bash, Behemoth Blade, Belch, Bestow, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Crafty Shield, Destiny Bond, Detect, Dragon Tail, Dynamax Cannon, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Obstruct, Protect, Rage Powder, Roar, Shell Trap, Sketch, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, or Whirlwind.",
+		desc: "The user uses the last move used by any Pokemon, including itself. The base move of Max and G-Max Moves is considered for this purpose. Fails if no move has been used, or if the last move used was Assist, Baneful Bunker, Beak Blast, Belch, Bestow, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Crafty Shield, Destiny Bond, Detect, Dragon Tail, Dynamax Cannon, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Obstruct, Protect, Rage Powder, Roar, Shell Trap, Sketch, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, or Whirlwind.",
 		shortDesc: "Uses the last move used in the battle.",
 		gen7: {
 			desc: "The user uses the last move used by any Pokemon, including itself. Fails if no move has been used, or if the last move used was Assist, Baneful Bunker, Beak Blast, Belch, Bestow, Celebrate, Chatter, Circle Throw, Copycat, Counter, Covet, Crafty Shield, Destiny Bond, Detect, Dragon Tail, Endure, Feint, Focus Punch, Follow Me, Helping Hand, Hold Hands, King's Shield, Mat Block, Me First, Metronome, Mimic, Mirror Coat, Mirror Move, Nature Power, Protect, Rage Powder, Roar, Shell Trap, Sketch, Sleep Talk, Snatch, Spiky Shield, Spotlight, Struggle, Switcheroo, Thief, Transform, Trick, Whirlwind, or any Z-Move.",
@@ -946,12 +953,16 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Corkscrew Crash",
 		shortDesc: "Power is equal to the base move's Z-Power.",
 	},
+	corrode: {
+		name: "Corrode",
+		desc: "Corrode deals damage and has no secondary effect. If used on Steel type Pokémon, this move ignores the type effectiveness of this move's type against Steel and treats it as being super effective against Steel types instead (even during Inverse Battles or if Corrode's type is changed).",
+		shortDesc: "Super effective against Steel types.",
+	},
 	corrosivegas: {
 		name: "Corrosive Gas",
 		desc: "The target loses its held item. This move cannot cause Pokemon with the Sticky Hold Ability to lose their held item or cause a Kyogre, a Groudon, a Giratina, an Arceus, a Genesect, a Silvally, a Zacian, or a Zamazenta to lose their Blue Orb, Red Orb, Griseous Orb, Plate, Drive, Memory, Rusted Sword, or Rusted Shield respectively. Items lost to this move cannot be regained with Recycle or the Harvest Ability.",
 		shortDesc: "Removes adjacent Pokemon's held items.",
 
-		fail: "#healblock",
 		removeItem: "  [SOURCE] corroded [POKEMON]'s [ITEM]!",
 	},
 	cosmicpower: {
@@ -1059,6 +1070,11 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "Power is equal to 120 * (target's current HP / target's maximum HP) + 1, rounded down.",
 		},
 	},
+	crystalrush: {
+		name: "Crystal Rush",
+		desc: "Crystal Rush inflicts damage, and is an increased priority move. If the target does not use an increased priority move during the round that it is used, Crystal Rush will go first regardless of the user's or target's speed.",
+		shortDesc: "Usually goes first.",
+	},
 	curse: {
 		name: "Curse",
 		desc: "If the user is not a Ghost type, lowers the user's Speed by 1 stage and raises the user's Attack and Defense by 1 stage. If the user is a Ghost type, the user loses 1/2 of its maximum HP, rounded down and even if it would cause fainting, in exchange for the target losing 1/4 of its maximum HP, rounded down, at the end of each turn while it is active. If the target uses Baton Pass, the replacement will continue to be affected. Fails if there is no target or if the target is already affected.",
@@ -1081,6 +1097,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Darkest Lariat",
 		desc: "Ignores the target's stat stage changes, including evasiveness.",
 		shortDesc: "Ignores the target's stat stage changes.",
+	},
+	darkmatter: {
+		name: "Dark Matter",
+		desc: "Dark Matter inflicts damage. A recharge turn is required on the turn after damage is done, during which no action may be performed.",
+		shortDesc: "User cannot move next turn.",
 	},
 	darkpulse: {
 		name: "Dark Pulse",
@@ -1185,9 +1206,9 @@ export const MovesText: {[k: string]: MoveText} = {
 	diamondstorm: {
 		name: "Diamond Storm",
 		desc: "Has a 50% chance to raise the user's Defense by 2 stages.",
-		shortDesc: "50% chance to raise user's Defense by 2.",
+		shortDesc: "50% chance to raise user's Def by 2 for each hit.",
 		gen6: {
-			desc: "Has a 50% chance to raise the user's Defense by 1 stage for each hit.",
+			desc: "Has a 50% chance to raise the user's Defense by 1 stage.",
 			shortDesc: "50% chance to raise user's Def by 1 for each hit.",
 		},
 	},
@@ -1345,6 +1366,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Raises the user's evasiveness by 1 stage.",
 		shortDesc: "Raises the user's evasiveness by 1.",
 	},
+	dracojet: {
+		name: "Draco Jet",
+		desc: "If the target does not use an increased priority move during the round that it is used, Draco Jet will go first regardless of the user's or target's speed.",
+		shortDesc: "Usually goes first..",
+	},
 	dracometeor: {
 		name: "Draco Meteor",
 		desc: "Lowers the user's Special Attack by 2 stages.",
@@ -1385,6 +1411,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Dragon Hammer",
 		shortDesc: "No additional effect.",
 	},
+	dragonify: {
+		name: "Dragonify",
+		desc: "Dragonify changes the target's type to pure Dragon; the effect lasts as long as the target is in battle, and changing form or transforming will also remove the effect.",
+		shortDesc: "Changes the target's type to Dragon.",
+	},
 	dragonpulse: {
 		name: "Dragon Pulse",
 		shortDesc: "No additional effect.",
@@ -1418,6 +1449,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		gen4: {
 			desc: "The user recovers 1/2 the HP lost by the target, rounded down. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded down.",
 		},
+	},
+	drakonvoice: {
+		name: "Drakon Voice",
+		desc: "The sheer force of the user's voice obliterates everything in its path.",
+		shortDesc: "Has no secondary effect.",
 	},
 	dreameater: {
 		name: "Dream Eater",
@@ -1551,7 +1587,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	encore: {
 		name: "Encore",
-		desc: "For its next 3 turns, the target is forced to repeat its last move used. If the affected move runs out of PP, the effect ends. Fails if the target is already under this effect, if it has not made a move, if the move has 0 PP, if the move is Assist, Copycat, Dynamax Cannon, Encore, Me First, Metronome, Mimic, Mirror Move, Nature Power, Sketch, Sleep Talk, Struggle, or Transform, or if the target is Dynamaxed.",
+		desc: "For its next 3 turns, the target is forced to repeat its last move used. If the affected move runs out of PP, the effect ends. Fails if the target is already under this effect, if it has not made a move, if the move has 0 PP, if the move is Assist, Copycat, Encore, Me First, Metronome, Mimic, Mirror Move, Nature Power, Sketch, Sleep Talk, Struggle, or Transform, or if the target is Dynamaxed.",
 		shortDesc: "Target repeats its last move for its next 3 turns.",
 		gen7: {
 			desc: "For its next 3 turns, the target is forced to repeat its last move used. If the affected move runs out of PP, the effect ends. Fails if the target is already under this effect, if it has not made a move, if the move has 0 PP, or if the move is Assist, Copycat, Encore, Me First, Metronome, Mimic, Mirror Move, Nature Power, Sketch, Sleep Talk, Struggle, Transform, or any Z-Move. Z-Powered moves can still be selected and executed during this effect.",
@@ -1612,10 +1648,10 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	entrainment: {
 		name: "Entrainment",
-		desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Truant, or Zen Mode, or the same Ability as the user, or if the user's Ability is As One, Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Gulp Missile, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, or Zen Mode.",
+		desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is As One, Battle Bond, Comatose, Disguise, Gulp Missile, Ice Face, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Truant, or Zen Mode, or the same Ability as the user, or if the user's Ability is As One, Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Gulp Missile, Hunger Switch, Ice Face, Illusion, Imposter, Multitype, Neutralizing Gas, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, Wonder Guard, or Zen Mode.",
 		shortDesc: "The target's Ability changes to match the user's.",
 		gen7: {
-			desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is Battle Bond, Comatose, Disguise, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Truant, or Zen Mode, or the same Ability as the user, or if the user's Ability is Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Illusion, Imposter, Multitype, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, or Zen Mode.",
+			desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is Battle Bond, Comatose, Disguise, Multitype, Power Construct, RKS System, Schooling, Shields Down, Stance Change, Truant, or Zen Mode, or the same Ability as the user, or if the user's Ability is Battle Bond, Comatose, Disguise, Flower Gift, Forecast, Illusion, Imposter, Multitype, Power Construct, Power of Alchemy, Receiver, RKS System, Schooling, Shields Down, Stance Change, Trace, Wonder Guard, or Zen Mode.",
 		},
 		gen6: {
 			desc: "Causes the target's Ability to become the same as the user's. Fails if the target's Ability is Multitype, Stance Change, Truant, or the same Ability as the user, or if the user's Ability is Flower Gift, Forecast, Illusion, Imposter, Multitype, Stance Change, Trace, or Zen Mode.",
@@ -2270,8 +2306,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gmaxdrumsolo: {
 		name: "G-Max Drum Solo",
-		desc: "Power is 160 regardless of the base move's Max Move power. This move and its effects ignore the Abilities of other Pokemon.",
-		shortDesc: "Always 160 power. Ignores Abilities.",
+		desc: "This move will always have 160 Base Power, and it ignores the abilities of opposing Pokemon.",
+		shortDesc: "Stronger than other Max Moves. Ignores abilities.",
 	},
 	gmaxfinale: {
 		name: "G-Max Finale",
@@ -2280,8 +2316,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gmaxfireball: {
 		name: "G-Max Fire Ball",
-		desc: "Power is 160 regardless of the base move's Max Move power. This move and its effects ignore the Abilities of other Pokemon.",
-		shortDesc: "Always 160 power. Ignores Abilities.",
+		desc: "This move will always have 160 Base Power, and it ignores the abilities of opposing Pokemon.",
+		shortDesc: "Stronger than other Max Moves. Ignores abilities.",
 	},
 	gmaxfoamburst: {
 		name: "G-Max Foam Burst",
@@ -2300,8 +2336,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gmaxhydrosnipe: {
 		name: "G-Max Hydrosnipe",
-		desc: "Power is 160 regardless of the base move's Max Move power. This move and its effects ignore the Abilities of other Pokemon.",
-		shortDesc: "Always 160 power. Ignores Abilities.",
+		desc: "This move will always have 160 Base Power, and it ignores the abilities of opposing Pokemon.",
+		shortDesc: "Stronger than other Max Moves. Ignores abilities.",
 	},
 	gmaxmalodor: {
 		name: "G-Max Malodor",
@@ -2315,13 +2351,13 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	gmaxoneblow: {
 		name: "G-Max One Blow",
-		desc: "Power is equal to the base move's Max Move power. This move bypasses all protection effects, including Max Guard.",
-		shortDesc: "Base move affects power. Bypasses Max Guard.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful and any Pokemon on the opposing side is using Baneful Bunker, Detect, King's Shield, Mat Block, Max Guard, Obstruct, Protect, or Spiky Shield, this move will fully break the protection.",
+		shortDesc: "Base move affects power. Breaks all protection.",
 	},
 	gmaxrapidflow: {
 		name: "G-Max Rapid Flow",
-		desc: "Power is equal to the base move's Max Move power. This move bypasses all protection effects, including Max Guard.",
-		shortDesc: "Base move affects power. Bypasses Max Guard.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful and any Pokemon on the opposing side is using Baneful Bunker, Detect, King's Shield, Mat Block, Max Guard, Obstruct, Protect, or Spiky Shield, this move will fully break the protection.",
+		shortDesc: "Base move affects power. Breaks all protection.",
 	},
 	gmaxreplenish: {
 		name: "G-Max Replenish",
@@ -2598,9 +2634,6 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "Resets the stat stages of both Pokemon to 0 and removes stat reductions due to burn and paralysis. Resets Toxic counters to 0 and removes the effect of confusion, Disable, Focus Energy, Leech Seed, Light Screen, Mist, and Reflect from both Pokemon. Removes the opponent's non-volatile status condition.",
 			shortDesc: "Resets all stat changes. Removes foe's status.",
 		},
-
-		// Only used in Gen 1
-		activate: "  All STATUS changes are eliminated!",
 	},
 	headbutt: {
 		name: "Headbutt",
@@ -2660,7 +2693,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	healingwish: {
 		name: "Healing Wish",
-		desc: "The user faints, and if the Pokemon brought out to replace it does not have full HP or has a non-volatile status condition, its HP is fully restored along with having any non-volatile status condition cured. The replacement is sent out at the end of the turn, and the healing happens before hazards take effect. This effect continues until a Pokemon that meets either of these conditions switches in at the user's position or gets swapped into the position with Ally Switch. Fails if the user is the last unfainted Pokemon in its party.",
+		desc: "The user faints and the next injured or statused Pokemon brought in has its HP fully restored along with having any non-volatile status condition cured. The healing happens before hazards take effect. Is not consumed if the Pokemon sent out is not injured or statused. Fails if the user is the last unfainted Pokemon in its party.",
 		shortDesc: "User faints. Next hurt Pokemon is fully healed.",
 		gen7: {
 			desc: "The user faints and the Pokemon brought out to replace it has its HP fully restored along with having any non-volatile status condition cured. The new Pokemon is sent out at the end of the turn, and the healing happens before hazards take effect. Fails if the user is the last unfainted Pokemon in its party.",
@@ -3098,6 +3131,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Prevents the user and the target from switching out. The user and the target can still switch out if either of them is holding Shed Shell or uses Baton Pass, Flip Turn, Parting Shot, Teleport, U-turn, or Volt Switch. The effect ends if either the user or the target leaves the field.",
 		shortDesc: "Prevents both user and target from switching out.",
 	},
+	jetstream: {
+		name: "Jet Stream",
+		desc: "The user creates a stream of supercharged air that allows their team to move first next round.",
+		shortDesc: "Increases team priority by 1 during the next turn.",
+	},
 	judgment: {
 		name: "Judgment",
 		desc: "This move's type depends on the user's held Plate.",
@@ -3312,6 +3350,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Has a 20% chance to lower the target's Defense by 1 stage.",
 		shortDesc: "20% chance to lower the target's Defense by 1.",
 	},
+	livewire: {
+		name: "Livewire",
+		desc: "Livewire sets an entry hazard around the target Pokémon, which will paralyze them upon switching in. It can stack up to 5 times, with each layer adding a 20% chance of incoming Pokemon being paralyzed upon switching in. This chance is doubled in the Rain.",
+		shortDesc: "Paralyzes grounded foes on switch-in. Max 5 layers.",
+	},
 	lockon: {
 		name: "Lock-On",
 		desc: "Until the end of the next turn, the target cannot avoid the user's moves, even if the target is in the middle of a two-turn move. The effect ends if either the user or the target leaves the field. Fails if this effect is active for the user.",
@@ -3352,14 +3395,15 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  Lucky Chant shielded [TEAM] from critical hits!",
 		end: "  [TEAM]'s Lucky Chant wore off!",
 	},
+	lunarcannon: {
+		name: "Low Sweep",
+		desc: "Lunar Cannon forces the user to charge on the first turn and then deals damage on the following turn. It will not need a turn to charge if used during a New Moon.",
+		shortDesc: "Charges turn 1. Hits turn 2. No charge in darkness.",
+	},
 	lunardance: {
 		name: "Lunar Dance",
-		desc: "The user faints, and if the Pokemon brought out to replace it does not have full HP or PP, or has a non-volatile status condition, its HP and PP are fully restored along with having any non-volatile status condition cured. The replacement is sent out at the end of the turn, and the healing happens before hazards take effect. This effect continues until a Pokemon that meets any of these conditions switches in at the user's position or gets swapped into the position with Ally Switch. Fails if the user is the last unfainted Pokemon in its party.",
-		shortDesc: "User faints. Next hurt Pkmn is cured, max HP/PP.",
-		gen7: {
-			desc: "The user faints and the Pokemon brought out to replace it has its HP and PP fully restored along with having any non-volatile status condition cured. The new Pokemon is sent out at the end of the turn, and the healing happens before hazards take effect. Fails if the user is the last unfainted Pokemon in its party.",
-			shortDesc: "User faints. Replacement is fully healed, with PP.",
-		},
+		desc: "The user faints and the Pokemon brought out to replace it has its HP and PP fully restored along with having any non-volatile status condition cured. The new Pokemon is sent out at the end of the turn, and the healing happens before hazards take effect. Fails if the user is the last unfainted Pokemon in its party.",
+		shortDesc: "User faints. Replacement is fully healed, with PP.",
 		gen4: {
 			desc: "The user faints and the Pokemon brought out to replace it has its HP and PP fully restored along with having any non-volatile status condition cured. The new Pokemon is sent out immediately and the healing happens after hazards take effect. Fails if the user is the last unfainted Pokemon in its party.",
 		},
@@ -3416,6 +3460,12 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Magikarp's Revenge",
 		desc: "Has a 100% chance to confuse the target and lower its Defense and Special Attack by 1 stage. The user recovers 1/2 the HP lost by the target, rounded half up. If Big Root is held by the user, the HP recovered is 1.3x normal, rounded half down. The user steals the foe's boosts. If this move is successful, the weather changes to rain unless it is already in effect, and the user gains the effects of Aqua Ring and Magic Coat.",
 		shortDesc: "Does many things turn 1. Can't move turn 2.",
+
+		fail: "#darkvoid",
+	},
+	magmarush: {
+		name: "Magma Rush",
+		shortDesc: "50% chance to raise the user's Speed by 1.",
 
 		fail: "#darkvoid",
 	},
@@ -3484,27 +3534,27 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	maxairstream: {
 		name: "Max Airstream",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Speed of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Speed of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute.",
 		shortDesc: "Base move affects power. Allies: +1 Speed.",
 	},
 	maxdarkness: {
 		name: "Max Darkness",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Defense of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Defense of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute.",
 		shortDesc: "Base move affects power. Foes: -1 Sp. Def.",
 	},
 	maxflare: {
 		name: "Max Flare",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Sunny Day begins. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Sunny Day begins.",
 		shortDesc: "Base move affects power. Starts Sunny Day.",
 	},
 	maxflutterby: {
 		name: "Max Flutterby",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Attack of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Attack of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute.",
 		shortDesc: "Base move affects power. Foes: -1 Sp. Atk.",
 	},
 	maxgeyser: {
 		name: "Max Geyser",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Rain Dance begins. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Rain Dance begins.",
 		shortDesc: "Base move affects power. Starts Rain Dance.",
 	},
 	maxguard: {
@@ -3516,67 +3566,67 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	maxhailstorm: {
 		name: "Max Hailstorm",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Hail begins. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Hail begins.",
 		shortDesc: "Base move affects power. Starts Hail.",
 	},
 	maxknuckle: {
 		name: "Max Knuckle",
-		desc: "Boosts the user and its allies' Attack by 1 stage. BP scales with the base move's BP. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Boosts the user and its allies' Attack by 1 stage. BP scales with the base move's BP.",
 		shortDesc: "Base move affects power. Allies: +1 Attack.",
 	},
 	maxlightning: {
 		name: "Max Lightning",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Electric Terrain begins. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Electric Terrain begins.",
 		shortDesc: "Base move affects power. Starts Electric Terrain.",
 	},
 	maxmindstorm: {
 		name: "Max Mindstorm",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Psychic Terrain begins. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Psychic Terrain begins.",
 		shortDesc: "Base move affects power. Starts Psychic Terrain.",
 	},
 	maxooze: {
 		name: "Max Ooze",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Attack of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Attack of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute.",
 		shortDesc: "Base move affects power. Allies: +1 Sp. Atk.",
 	},
 	maxovergrowth: {
 		name: "Max Overgrowth",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Grassy Terrain begins. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Grassy Terrain begins.",
 		shortDesc: "Base move affects power. Starts Grassy Terrain.",
 	},
 	maxphantasm: {
 		name: "Max Phantasm",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Defense of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Defense of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute.",
 		shortDesc: "Base move affects power. Foes: -1 Defense.",
 	},
 	maxquake: {
 		name: "Max Quake",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Defense of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Special Defense of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute.",
 		shortDesc: "Base move affects power. Allies: +1 Sp. Def.",
 	},
 	maxrockfall: {
 		name: "Max Rockfall",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Sandstorm begins. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Sandstorm begins.",
 		shortDesc: "Base move affects power. Starts Sandstorm.",
 	},
 	maxstarfall: {
 		name: "Max Starfall",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Misty Terrain begins. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the effect of Misty Terrain begins.",
 		shortDesc: "Base move affects power. Starts Misty Terrain.",
 	},
 	maxsteelspike: {
 		name: "Max Steelspike",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Defense of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Defense of each Pokemon on the user's side is raised by 1 stage, even if they have a substitute.",
 		shortDesc: "Base move affects power. Allies: +1 Defense.",
 	},
 	maxstrike: {
 		name: "Max Strike",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Speed of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Speed of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute.",
 		shortDesc: "Base move affects power. Foes: -1 Speed.",
 	},
 	maxwyrmwind: {
 		name: "Max Wyrmwind",
-		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Attack of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute. This effect does not happen if the user is not Dynamaxed. If this move is used as a base move, it deals damage with a power of 0.",
+		desc: "Power is equal to the base move's Max Move power. If this move is successful, the Attack of each Pokemon on the opposing side is lowered by 1 stage, even if they have a substitute.",
 		shortDesc: "Base move affects power. Foes: -1 Attack.",
 	},
 	meanlook: {
@@ -3600,6 +3650,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Meditate",
 		desc: "Raises the user's Attack by 1 stage.",
 		shortDesc: "Raises the user's Attack by 1.",
+	},
+	medusaray: {
+		name: "Medusaray",
+		desc: "Medusa Ray changes the target's type to pure Rock. The effect lasts as long as the target is in battle, although changing form or transforming will remove the effect.",
+		shortDesc: "Changes the target's type to Rock.",
 	},
 	mefirst: {
 		name: "Me First",
@@ -3729,7 +3784,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	mimic: {
 		name: "Mimic",
-		desc: "While the user remains active, this move is replaced by the last move used by the target. The copied move has the maximum PP for that move. Fails if the target has not made a move, if the user has Transformed, if the user already knows the move, or if the move is Behemoth Bash, Behemoth Blade, Chatter, Dynamax Cannon, Mimic, Sketch, Struggle, Transform, or any Z-Move.",
+		desc: "While the user remains active, this move is replaced by the last move used by the target. The copied move has the maximum PP for that move. Fails if the target has not made a move, if the user has Transformed, if the user already knows the move, or if the move is Chatter, Mimic, Sketch, Struggle, Transform, or any Z-Move.",
 		shortDesc: "The last move the target used replaces this one.",
 		gen6: {
 			desc: "While the user remains active, this move is replaced by the last move used by the target. The copied move has the maximum PP for that move. Fails if the target has not made a move, if the user has Transformed, if the user already knows the move, or if the move is Chatter, Mimic, Sketch, Struggle, or Transform.",
@@ -3851,13 +3906,9 @@ export const MovesText: {[k: string]: MoveText} = {
 		gen2: {
 			desc: "While the user remains active, it is protected from having its stat stages lowered by other Pokemon. Fails if the user already has the effect. Baton Pass can be used to transfer this effect to an ally.",
 			shortDesc: "While active, user is protected from stat drops.",
-			start: "  [POKEMON]'s shrouded in MIST!",
-			block: "  [POKEMON]'s protected by MIST.",
 		},
 		gen1: {
 			desc: "While the user remains active, it is protected from having its stat stages lowered by other Pokemon, unless caused by the secondary effect of a move. Fails if the user already has the effect. If any Pokemon uses Haze, this effect ends.",
-			start: "  [POKEMON]'s shrouded in mist!",
-			block: "  But, it failed!",
 		},
 
 		start: "  [TEAM] became shrouded in mist!",
@@ -3926,6 +3977,11 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "The user restores 1/2 of its maximum HP if no weather conditions are in effect, all of its HP if the weather is Sunny Day, and 1/4 of its maximum HP if the weather is Rain Dance or Sandstorm, all rounded down.",
 		},
 	},
+	morph: {
+		name: "Morph",
+		desc: "Morph functions the same as Transform; however, if a Delta species of the target exists, the user will turn into that instead. If the target has multiple Delta Species, it will select one of them at random.",
+		shortDesc: "Will prioritize delta morphs. Otherwise, Transforms.",
+	},
 	mudbomb: {
 		name: "Mud Bomb",
 		desc: "Has a 30% chance to lower the target's accuracy by 1 stage.",
@@ -3974,6 +4030,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "Raises the user's Special Attack by 2 stages.",
 		shortDesc: "Raises the user's Sp. Atk by 2.",
 	},
+	nanorepair: {
+		name: "Nanorepair",
+		desc: "Restores up to 50% of the user's maximum HP and increases the user's Defense by 1 stage. The Defense boost is applied even if the user's current HP is already equal to its maximum HP.",
+		shortDesc: "Heals the user by 50% of its max HP. Defense +1.",
+	},
 	naturalgift: {
 		name: "Natural Gift",
 		desc: "The type and power of this move depend on the user's held Berry, and the Berry is lost. Fails if the user is not holding a Berry, if the user has the Klutz Ability, or if Embargo or Magic Room is in effect for the user.",
@@ -4004,6 +4065,10 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		move: "Nature Power turned into [MOVE]!",
 	},
+	naturesfury: {
+		name: "Nature's Fury",
+		shortDesc: "20% chance to raise SpD by 1 (not acc/eva).",
+	},
 	naturesmadness: {
 		name: "Nature's Madness",
 		desc: "Deals damage to the target equal to half of its current HP, rounded down, but not less than 1 HP.",
@@ -4020,6 +4085,11 @@ export const MovesText: {[k: string]: MoveText} = {
 	neverendingnightmare: {
 		name: "Never-Ending Nightmare",
 		shortDesc: "Power is equal to the base move's Z-Power.",
+	},
+	newmoon: {
+		name: "New Moon",
+		desc: "For 5 turns, intense darkness powers Dark and Ghost moves.",
+		shortDesc: "For 5 turns, intense darkness powers Dark and Ghost moves.",
 	},
 	nightdaze: {
 		name: "Night Daze",
@@ -4195,6 +4265,11 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		start: "  All Pok\u00E9mon that heard the song will faint in three turns!",
 		activate: "  [POKEMON]'s perish count fell to [NUMBER].",
+	},
+	permafrost: {
+		name: "Permafrost",
+		desc: "Permafrost sets an entry hazard around the target Pokémon, which will Freeze them upon switching in. It can stack up to 5 times, with each layer adding a 10% chance of incoming Pokemon being frozen upon switching in. This chance is doubled under Hail.",
+		shortDesc: "Freezes grounded foes on switch-in. Max 5 layers.",
 	},
 	petalblizzard: {
 		name: "Petal Blizzard",
@@ -4522,7 +4597,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	purify: {
 		name: "Purify",
-		desc: "The target is cured if it has a non-volatile status condition. If the target was cured, the user restores 1/2 of its maximum HP, rounded down.",
+		desc: "The target is cured if it has a non-volatile status condition. If the target was cured, the user restores 1/2 of its maximum HP, rounded half up.",
 		shortDesc: "Cures target's status; heals user 1/2 max HP if so.",
 	},
 	pursuit: {
@@ -4689,11 +4764,8 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	recycle: {
 		name: "Recycle",
-		desc: "The user regains the item it last used. Fails if the user is holding an item, if the user has not held an item, if the item was a popped Air Balloon, if the item was picked up by a Pokemon with the Pickup Ability, or if the item was lost to Bug Bite, Corrosive Gas, Covet, Incinerate, Knock Off, Pluck, or Thief. Items thrown with Fling can be regained.",
+		desc: "The user regains the item it last used. Fails if the user is holding an item, if the user has not held an item, if the item was a popped Air Balloon, if the item was picked up by a Pokemon with the Pickup Ability, or if the item was lost to Bug Bite, Covet, Incinerate, Knock Off, Pluck, or Thief. Items thrown with Fling can be regained.",
 		shortDesc: "Restores the item the user last used.",
-		gen7: {
-			desc: "The user regains the item it last used. Fails if the user is holding an item, if the user has not held an item, if the item was a popped Air Balloon, if the item was picked up by a Pokemon with the Pickup Ability, or if the item was lost to Bug Bite, Covet, Incinerate, Knock Off, Pluck, or Thief. Items thrown with Fling can be regained.",
-		},
 		gen4: {
 			desc: "The user regains the item last used by a Pokemon in its current position on the field, even if that Pokemon was not the user. Fails if the user is holding an item, if no items have been used at the user's position, or if the item was lost to Covet, Knock Off, or Thief. Items thrown with Fling can be regained.",
 		},
@@ -4741,6 +4813,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "The user cures its burn, poison, or paralysis. Fails if the user is not burned, poisoned, or paralyzed.",
 		shortDesc: "User cures its burn, poison, or paralysis.",
 	},
+	regurgitate: {
+		name: "Regurgitate",
+		shortDesc: "Delta Muk's ability's corresponding move.",
+	},
 	relicsong: {
 		name: "Relic Song",
 		desc: "Has a 10% chance to cause the target to fall asleep. If this move is successful on at least one target and the user is a Meloetta, it changes to Pirouette Forme if it is currently in Aria Forme, or changes to Aria Forme if it is currently in Pirouette Forme. This forme change does not happen if the Meloetta has the Sheer Force Ability. The Pirouette Forme reverts to Aria Forme when Meloetta is not active.",
@@ -4761,6 +4837,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Retaliate",
 		desc: "Power doubles if one of the user's party members fainted last turn.",
 		shortDesc: "Power doubles if an ally fainted last turn.",
+	},
+	retrograde: {
+		name: "Retrograde",
+		desc: "The target, if they are a Mega Pokémon, is reverted to its basic form.",
+		shortDesc: "Reverts Mega Evolved Pokémon back to their base form.",
 	},
 	return: {
 		name: "Return",
@@ -4963,13 +5044,12 @@ export const MovesText: {[k: string]: MoveText} = {
 	sandstorm: {
 		name: "Sandstorm",
 		desc: "For 5 turns, the weather becomes Sandstorm. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP, rounded down, unless they are a Ground, Rock, or Steel type, or have the Magic Guard, Overcoat, Sand Force, Sand Rush, or Sand Veil Abilities. During the effect, the Special Defense of Rock-type Pokemon is multiplied by 1.5 when taking damage from a special attack. Lasts for 8 turns if the user is holding Smooth Rock. Fails if the current weather is Sandstorm.",
-		shortDesc: "For 5 turns, a sandstorm rages. Rock: 1.5x SpD.",
+		shortDesc: "For 5 turns, a sandstorm rages.",
 		gen4: {
 			desc: "For 5 turns, the weather becomes Sandstorm. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP, rounded down, unless they are a Ground, Rock, or Steel type, or have the Magic Guard or Sand Veil Abilities. During the effect, the Special Defense of Rock-type Pokemon is multiplied by 1.5 when taking damage from a special attack. Lasts for 8 turns if the user is holding Smooth Rock. Fails if the current weather is Sandstorm.",
 		},
 		gen3: {
 			desc: "For 5 turns, the weather becomes Sandstorm. At the end of each turn except the last, all active Pokemon lose 1/16 of their maximum HP, rounded down, unless they are a Ground, Rock, or Steel type, or have the Sand Veil Ability. Fails if the current weather is Sandstorm.",
-			shortDesc: "For 5 turns, a sandstorm rages.",
 		},
 		gen2: {
 			desc: "For 5 turns, the weather becomes Sandstorm. At the end of each turn except the last, all active Pokemon lose 1/8 of their maximum HP, rounded down, unless they are a Ground, Rock, or Steel type. Fails if the current weather is Sandstorm.",
@@ -5622,6 +5702,11 @@ export const MovesText: {[k: string]: MoveText} = {
 
 		damage: "#roughskin",
 	},
+	spiritaway: {
+		name: "Spirit Away",
+		desc: "On the turn it is selected, Spirit Away takes the target away. While away, the target cannot act. While away, both the user and the target avoid any move targeted at them. The next turn, the target is brought back and receives damage. Spirit Away will fail if the target is behind a substitute, or if used on a target that is already semi-invulnerable due to moves such as Fly, Bounce, Sky Drop, or another Spirit Away.",
+		shortDesc: "User and foe are taken away turn 1. Damages on turn 2.",
+	},
 	spiritbreak: {
 		name: "Spirit Break",
 		desc: "Has a 100% chance to lower the target's Special Attack by 1 stage.",
@@ -5699,6 +5784,15 @@ export const MovesText: {[k: string]: MoveText} = {
 		start: "  Pointed stones float in the air around [TEAM]!",
 		end: "  The pointed stones disappeared from around [TEAM]!",
 		damage: "  Pointed stones dug into [POKEMON]!",
+	},
+	stealthrockfire: {
+		name: "Stealth Rock Fire",
+		desc: "Sets up a hazard on the opposing side of the field, damaging each opposing Pokemon that switches in. Fails if the effect is already active on the opposing side. Foes lose 1/32, 1/16, 1/8, 1/4, or 1/2 of their maximum HP, rounded down, based on their weakness to the Fire type; 0.25x, 0.5x, neutral, 2x, or 4x, respectively. Can be removed from the opposing side if any opposing Pokemon uses Rapid Spin or Defog successfully, or is hit by Defog.",
+		shortDesc: "Hurts foes on switch-in. Factors Fire weakness.",
+
+		start: "  Magma started bubbling around [PARTY]!",
+		end: "  The Magma surrounding [PARTY] disappeared!",
+		damage: "  The magma scorched [POKEMON]!",
 	},
 	steameruption: {
 		name: "Steam Eruption",
@@ -6511,8 +6605,8 @@ export const MovesText: {[k: string]: MoveText} = {
 			shortDesc: "Lasts 3-6 turns. Active Pokemon cannot sleep.",
 		},
 		gen3: {
-			desc: "The user spends two to five turns locked into this move. This move targets an opposing Pokemon at random on each turn. During effect, no active Pokemon can fall asleep by any means, and Pokemon that are already asleep wake up as their turn starts or at the end of each turn, including the last one. If the user is prevented from moving or the attack is not successful against the target during one of the turns, the effect ends.",
-			shortDesc: "Lasts 2-5 turns. Active Pokemon cannot sleep.",
+			desc: "The user spends three to five turns locked into this move. This move targets an opposing Pokemon at random on each turn. During effect, no active Pokemon can fall asleep by any means, and Pokemon that are already asleep wake up as their turn starts or at the end of each turn, including the last one. If the user is prevented from moving or the attack is not successful against the target during one of the turns, the effect ends.",
+			shortDesc: "Lasts 3-5 turns. Active Pokemon cannot sleep.",
 		},
 
 		start: "  [POKEMON] caused an uproar!",
@@ -6720,6 +6814,11 @@ export const MovesText: {[k: string]: MoveText} = {
 		desc: "If the target lost HP, the user takes recoil damage equal to 1/4 the HP lost by the target, rounded half up, but not less than 1 HP.",
 		shortDesc: "Has 1/4 recoil.",
 	},
+	wildefire: {
+		name: "Wildfire",
+		desc: "Wildfire is a status move that inflicts burns on the target if it manages to hit them. It will hit both targets in double battles. Additionally, if the target is a Grass-type Pokémon, Wildfire will also burn every Pokémon in the target player's party that possesses a weakness to Fire-type attacks.",
+		shortDesc: "If foe is Grass, burns all Pokemon weak to fire.",
+	},
 	willowisp: {
 		name: "Will-O-Wisp",
 		desc: "Burns the target.",
@@ -6731,7 +6830,7 @@ export const MovesText: {[k: string]: MoveText} = {
 	},
 	wish: {
 		name: "Wish",
-		desc: "At the end of the next turn, the Pokemon at the user's position has 1/2 of the user's maximum HP restored to it, rounded down. Fails if this move is already in effect for the user's position.",
+		desc: "At the end of the next turn, the Pokemon at the user's position has 1/2 of the user's maximum HP restored to it, rounded half up. Fails if this move is already in effect for the user's position.",
 		shortDesc: "Next turn, 50% of the user's max HP is restored.",
 		gen4: {
 			desc: "At the end of the next turn, the Pokemon at the user's position has 1/2 of its maximum HP restored to it, rounded down. Fails if this move is already in effect for the user's position.",
@@ -6763,6 +6862,10 @@ export const MovesText: {[k: string]: MoveText} = {
 		name: "Work Up",
 		desc: "Raises the user's Attack and Special Attack by 1 stage.",
 		shortDesc: "Raises the user's Attack and Sp. Atk by 1.",
+	},
+	wormhole: {
+		name: "Wormhole",
+		shortDesc: "Usually always goes first.",
 	},
 	worryseed: {
 		name: "Worry Seed",
@@ -6848,5 +6951,10 @@ export const MovesText: {[k: string]: MoveText} = {
 			desc: "Will always result in a critical hit.",
 			shortDesc: "Nearly always goes first. Always crits.",
 		},
+	},
+	zombiestrike: {
+		name: "Zombie Strike",
+		desc: "As Zombie Strike cannot currently be taught to the player's Pokémon through level up, using TMs or move tutors, the only instance where it can be encountered in-game is against Waiter Franklin's Marowak in the Memory Chamber.",
+		shortDesc: "Has no secondary effect.",
 	},
 };

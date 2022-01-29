@@ -1,7 +1,6 @@
 import {FS} from '../../lib/fs';
 
 const SUSPECTS_FILE = 'config/suspects.json';
-const WHITELIST = ["kris"];
 
 interface SuspectTest {
 	tier: string;
@@ -16,13 +15,7 @@ function saveSuspectTests() {
 	FS(SUSPECTS_FILE).writeUpdate(() => JSON.stringify(suspectTests));
 }
 
-function checkPermissions(context: Chat.CommandContext) {
-	const user = context.user;
-	if (WHITELIST.includes(user.id)) return true;
-	context.checkCan('gdeclare');
-}
-
-export const commands: Chat.ChatCommands = {
+export const commands: ChatCommands = {
 	suspect: 'suspects',
 	suspects: {
 		''(target, room, user) {
@@ -42,14 +35,14 @@ export const commands: Chat.ChatCommands = {
 
 		edit: 'add',
 		add(target, room, user) {
-			checkPermissions(this);
+			this.checkCan('gdeclare');
 
 			const [tier, suspect, date, url] = target.split(',');
 			if (!(tier && suspect && date && url)) {
 				return this.parse('/help suspects');
 			}
 
-			const format = Dex.formats.get(tier);
+			const format = Dex.getFormat(tier);
 			if (!format.exists) return this.errorReply(`"${tier}" is not a valid tier.`);
 
 			const suspectString = suspect.trim();
@@ -78,7 +71,7 @@ export const commands: Chat.ChatCommands = {
 
 		delete: 'remove',
 		remove(target, room, user) {
-			checkPermissions(this);
+			this.checkCan('gdeclare');
 
 			const format = toID(target);
 			const test = suspectTests[format];
