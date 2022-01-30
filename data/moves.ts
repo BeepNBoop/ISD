@@ -2,7 +2,7 @@
 
 List of flags and their descriptions:
 
-authentic: Ignores a target's substitute.
+bypasssub: Ignores a target's substitute.
 bite: Power is multiplied by 1.5 when used by a Pokemon with the Strong Jaw Ability.
 bullet: Has no effect on Pokemon with the Bulletproof Ability.
 charge: The user is unable to make a move between turns.
