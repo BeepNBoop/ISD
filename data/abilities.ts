@@ -32,8 +32,6 @@ Ratings and how they work:
 
 */
 
-import { checkRipgrepAvailability } from "../server/config-loader";
-
 export const Abilities: {[abilityid: string]: AbilityData} = {
 	noability: {
 		isNonstandard: "Past",
